@@ -5,6 +5,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountDataService } from './Services/account-data.service';
+import { LoggingService } from './Services/logging.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AccountDataService,LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
